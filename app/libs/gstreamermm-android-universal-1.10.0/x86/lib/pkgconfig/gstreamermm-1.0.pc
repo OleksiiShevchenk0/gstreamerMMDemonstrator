@@ -1,0 +1,19 @@
+prefix=/home/nshiv/Documents/project/VC_Sentinel_Gst_Cerbero/build/dist/android_universal/x86
+exec_prefix=${prefix}
+libdir=/home/nshiv/Documents/project/VC_Sentinel_Gst_Cerbero/build/dist/android_universal/x86/lib
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+includedir=${prefix}/include
+
+docdir=${datarootdir}/doc/gstreamermm-1.0
+doxytagfile=${docdir}/reference/gstreamermm-1.0.tag
+htmlrefdir=${docdir}/reference/html
+htmlrefpub=http://library.gnome.org/gstreamermm/unstable/
+
+Name: gstreamermm
+Description: C++ binding for gstreamer
+Version: 1.10.0
+URL: http://www.gtkmm.org/
+Requires: giomm-2.4 >= 2.47.6 gstreamer-1.0 >= 1.10.0 gstreamer-base-1.0 >= 1.10.0 gstreamer-check-1.0 >= 1.10.0 gstreamer-controller-1.0 >= 1.10.0 gstreamer-net-1.0 >= 1.10.0 gstreamer-allocators-1.0 >= 1.10.0 gstreamer-app-1.0 >= 1.10.0 gstreamer-audio-1.0 >= 1.10.0 gstreamer-fft-1.0 >= 1.10.0 gstreamer-pbutils-1.0 >= 1.10.0 gstreamer-plugins-base-1.0 >= 1.10.0 gstreamer-riff-1.0 >= 1.10.0 gstreamer-rtp-1.0 >= 1.10.0 gstreamer-rtsp-1.0 >= 1.10.0 gstreamer-sdp-1.0 >= 1.10.0 gstreamer-tag-1.0 >= 1.10.0 gstreamer-video-1.0 >= 1.10.0
+Libs: -L${libdir} -lgstreamermm-1.0
+Cflags: -I${includedir}/gstreamermm-1.0 -I${libdir}/gstreamermm-1.0/include
