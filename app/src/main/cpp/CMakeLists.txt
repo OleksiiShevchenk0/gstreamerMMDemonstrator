@@ -31,7 +31,19 @@ add_library( # Sets the name of the library.
 # default, you only need to specify the name of the public NDK library
 # you want to add. CMake verifies that the library exists before
 # completing its build.
+add_library( gstreamermm-android-universal-1.10.0
+        SHARED
+        IMPORTED
+)
+set_target_properties( # Specifies the target library.
+        gstreamermm-android-universal-1.10.0
 
+        # Specifies the parameter you want to define.
+        PROPERTIES IMPORTED_LOCATION
+
+        # Provides the path to the library you want to import.
+        ../../app/libs/gstreamermm-android-universal-1.10.0${ANDROID_ABI}/lib/libgstreamermm-1.0.so )
+include_directories( ../../app/libs/gstreamermm-android-universal-1.10.0${ANDROID_ABI}/include/gstreamermm/ )
 #find_library( # Sets the name of the path variable.
 ##        log-lib
 ##        gstreamermm
