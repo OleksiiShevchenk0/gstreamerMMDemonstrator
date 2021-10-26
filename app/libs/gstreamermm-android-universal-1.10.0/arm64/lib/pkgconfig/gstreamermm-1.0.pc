@@ -1,6 +1,6 @@
-prefix=/home/nshiv/Documents/project/VC_Sentinel_Gst_Cerbero/build/dist/android_universal/arm64
+prefix=/mnt/build/dist/android_universal/arm64
 exec_prefix=${prefix}
-libdir=/home/nshiv/Documents/project/VC_Sentinel_Gst_Cerbero/build/dist/android_universal/arm64/lib
+libdir=/mnt/build/dist/android_universal/arm64/lib
 datarootdir=${prefix}/share
 datadir=${datarootdir}
 includedir=${prefix}/include

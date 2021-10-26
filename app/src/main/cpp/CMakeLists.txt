@@ -18,10 +18,8 @@ project("gstreamermm")
 
 add_library( # Sets the name of the library.
         gstreamermm
-
         # Sets the library as a shared library.
         SHARED
-
         # Provides a relative path to your source file(s).
         testApp.cpp
         native-lib.cpp)
@@ -35,15 +33,43 @@ add_library( gstreamermm-android-universal-1.10.0
         SHARED
         IMPORTED
 )
-set_target_properties( # Specifies the target library.
-        gstreamermm-android-universal-1.10.0
 
+add_library( libsigc-2.0
+        SHARED
+        IMPORTED
+        )
+
+add_library( glibmm-2.4
+        SHARED
+        IMPORTED
+        )
+set_target_properties( gstreamermm-android-universal-1.10.0 libsigc-2.0 glibmm-2.4
         # Specifies the parameter you want to define.
-        PROPERTIES IMPORTED_LOCATION
+        PROPERTIES
+        IMPORTED_LOCATION /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-android-universal-1.10.0/x86_64/lib/libgstreamermm-1.0.so
+        IMPORTED_LOCATION /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-android-universal-1.10.0/x86_64/lib/libsigc-2.0.so
+        IMPORTED_LOCATION /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-android-universal-1.10.0/x86_64/lib/libglibmm-2.4.so
+        )
 
-        # Provides the path to the library you want to import.
-        ../../app/libs/gstreamermm-android-universal-1.10.0${ANDROID_ABI}/lib/libgstreamermm-1.0.so )
-include_directories( ../../app/libs/gstreamermm-android-universal-1.10.0${ANDROID_ABI}/include/gstreamermm/ )
+include_directories( /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-android-universal-1.10.0/x86_64/include/gstreamermm-1.0
+                     /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-1.10.0/gstreamer/gstreamermm
+        /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-android-universal-1.10.0/x86_64/include/glibmm-2.4
+        /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-android-universal-1.10.0/x86_64/include
+        /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs
+        /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-1.10.0/MSVC_2015/gstreamermm
+        /home/oshevchenko/Logitevch/VC_Sentinel_Gst_Cerbero/build/sources/android_universal/x86/glibmm-2.4/include
+        /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-android-universal-1.10.0/x86_64/glib
+        /home/oshevchenko/Logitevch/GstreamerDemonstrator/app/libs/gstreamermm-android-universal-1.10.0/x86_64//include
+        /home/oshevchenko/Logitevch/VC_Sentinel_Gst_Cerbero/build/sources/android_universal/x86/glibmm-2.62.0/glib
+        /home/oshevchenko/Logitevch/VC_Sentinel_Gst_Cerbero/build/dist/android_universal/x86/include/glib-2.0
+        /home/oshevchenko/Logitevch/VC_Sentinel_Gst_Cerbero/build/sources/android_universal/x86/glib-2.62.6/_builddir/glib
+        /home/oshevchenko/Logitevch/VC_Sentinel_Gst_Cerbero/build/sources/android_universal/x86_64/libsigc++-2.10.3
+        /home/oshevchenko/Logitevch/VC_Sentinel_Gst_Cerbero/build/dist/android_universal/x86_64/include/gstreamer-1.0
+        /home/oshevchenko/cerbero/VC_Sentinel_Gst_Cerbero/build/dist/android_universal/x86_64/include/gstreamer-1.0
+        /home/oshevchenko/cerbero/VC_Sentinel_Gst_Cerbero/build/dist/android_universal/x86_64/include/giomm-2.4
+        /home/oshevchenko/Logitevch/VC_Sentinel_Gst_Cerbero/build/sources/android_universal/x86_64/glibmm-2.62.0/gio/
+        )
+#include_directories( ../../app/libs/gstreamermm-android-universal-1.10.0/${ANDROID_ABI}/include/gstreamermm/ )
 #find_library( # Sets the name of the path variable.
 ##        log-lib
 ##        gstreamermm
@@ -57,6 +83,6 @@ include_directories( ../../app/libs/gstreamermm-android-universal-1.10.0${ANDROI
 # build script, prebuilt third-party libraries, or system libraries.
 
 #target_link_libraries( # Specifies the target library.
-#
+##        gstreamermm-android-universal-1.10.0
 ##        ${log-lib}
 #        )

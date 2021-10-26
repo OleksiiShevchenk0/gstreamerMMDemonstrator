@@ -4,6 +4,5 @@
 
 #ifndef GSTREAMERMM_TESTAPP_H
 #define GSTREAMERMM_TESTAPP_H
-#include <gstreamermm.h>
 void playFile();
 #endif //GSTREAMERMM_TESTAPP_H
